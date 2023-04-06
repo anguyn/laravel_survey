@@ -32,6 +32,11 @@ const routes = [
     ],
   },
   {
+    path: "/view/survey/:slug",
+    name: "SurveyPublicView",
+    component: () => import("../views/SurveyPublicView.vue"),
+  },
+  {
     path: "/auth",
     redirect: "/login",
     name: "Auth",

@@ -14,7 +14,7 @@ class StoreSurveyRequest extends FormRequest
         return true;
     }
 
-    protected function prepareForValidation() 
+    protected function prepareForValidation()
     {
         $this->merge([
             "user_id" => $this->user()->id
@@ -35,6 +35,7 @@ class StoreSurveyRequest extends FormRequest
             "status" => "required|boolean",
             "description" => "nullable|string",
             "expire_date" => "nullable|date|after:tomorrow",
+            "questions" => "array",
         ];
     }
 }
